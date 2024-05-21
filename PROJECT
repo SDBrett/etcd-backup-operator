@@ -1,0 +1,10 @@
+domain: sdbrett.com
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+  sdk.x-openshift.io/v1: {}
+projectName: etcd-backup-operator
+repo: github.com/SDBrett/etcd-backup-operator
+version: "3"
