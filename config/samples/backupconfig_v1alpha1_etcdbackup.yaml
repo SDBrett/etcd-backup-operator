@@ -1,0 +1,12 @@
+apiVersion: backupconfig.sdbrett.com/v1alpha1
+kind: EtcdBackup
+metadata:
+  labels:
+    app.kubernetes.io/name: etcdbackup
+    app.kubernetes.io/instance: etcdbackup-sample
+    app.kubernetes.io/part-of: etcd-backup-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: etcd-backup-operator
+  name: etcdbackup-sample
+spec:
+  # TODO(user): Add fields here

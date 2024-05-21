@@ -7,4 +7,14 @@ plugins:
   sdk.x-openshift.io/v1: {}
 projectName: etcd-backup-operator
 repo: github.com/SDBrett/etcd-backup-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: sdbrett.com
+  group: backupconfig
+  kind: EtcdBackup
+  path: github.com/SDBrett/etcd-backup-operator/api/v1alpha1
+  version: v1alpha1
 version: "3"
