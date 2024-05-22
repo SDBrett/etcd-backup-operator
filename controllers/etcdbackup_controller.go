@@ -19,12 +19,13 @@ package controllers
 import (
 	"context"
 
+	backupconfigv1alpha1 "github.com/SDBrett/etcd-backup-operator/api/v1alpha1"
+	batchv1 "k8s.io/api/batch/v1"
+	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/log"
-
-	backupconfigv1alpha1 "github.com/SDBrett/etcd-backup-operator/api/v1alpha1"
 )
 
 // EtcdBackupReconciler reconciles a EtcdBackup object
@@ -58,5 +59,7 @@ func (r *EtcdBackupReconciler) Reconcile(ctx context.Context, req ctrl.Request) 
 func (r *EtcdBackupReconciler) SetupWithManager(mgr ctrl.Manager) error {
 	return ctrl.NewControllerManagedBy(mgr).
 		For(&backupconfigv1alpha1.EtcdBackup{}).
+		Owns(&batchv1.CronJob{}).
+		Owns(&corev1.ConfigMap{}).
 		Complete(r)
 }

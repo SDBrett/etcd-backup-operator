@@ -13,7 +13,7 @@ spec:
     listKind: EtcdBackupList
     plural: etcdbackups
     singular: etcdbackup
-  scope: Cluster
+  scope: Namespace
   versions:
   - name: v1alpha1
     schema:
