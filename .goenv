@@ -1,0 +1,2 @@
+export GOROOT=$(go1.21.10 env GOROOT)
+export PATH=${GOROOT}/bin:${PATH}
