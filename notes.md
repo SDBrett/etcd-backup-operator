@@ -48,4 +48,12 @@ Improvements to make operator actually usable
 - [ ] User provided RBAC resources
 - [ ] Status
 - [ ] Event reporting
+- [ ] ETCD settings
+  - [ ] Certificate paths
+    - [ ] cert
+    - [ ] ca cert
+    - [ ] key
+  - [ ] endpoint IP (default to 127.0.0.1)
+  - [ ] port (default to 2379)
+  - [ ] Configure container image
 
