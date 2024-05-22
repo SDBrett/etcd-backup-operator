@@ -4,6 +4,7 @@ Notes and planning<-- omit in toc -->
   - [Functionality](#functionality)
   - [Resources](#resources)
   - [Inputs](#inputs)
+  - [Process](#process)
 - [Making useable](#making-useable)
   - [CR Configuration Items](#cr-configuration-items)
 
@@ -26,6 +27,11 @@ What is required to test raw functionality of backing up ETCD
 ### Inputs
 No input required from CR to test raw functionality.
 
+### Process
+1. Reconcile EtcdBackup CR
+2. Create ConfigMap containing backup script
+3. Create RBAC resources
+4. Create CronJob
 
 ## Making useable
 
