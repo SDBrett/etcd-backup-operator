@@ -66,7 +66,10 @@ func (r *EtcdBackupReconciler) Reconcile(ctx context.Context, req ctrl.Request) 
 		log.Error(err, "Failed to get EtcdBackup")
 		return ctrl.Result{}, err
 	}
-
+	cj := r.etcdBackupCronJob(etcdBackup)
+	if cj.Name == "toast" {
+		println("oops")
+	}
 	// TODO: ADD configMap
 
 	return ctrl.Result{}, nil
