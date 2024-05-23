@@ -24,3 +24,4 @@ scratch
 
 bin/setup-envtest
 bin/k8s
+bin/kustomize

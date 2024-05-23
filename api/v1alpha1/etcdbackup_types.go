@@ -40,7 +40,7 @@ type EtcdBackupStatus struct {
 
 //+kubebuilder:object:root=true
 //+kubebuilder:subresource:status
-//+kubebuilder:resource:scope=Namespace
+//+kubebuilder:resource:scope=Namespaced
 
 // EtcdBackup is the Schema for the etcdbackups API
 type EtcdBackup struct {
