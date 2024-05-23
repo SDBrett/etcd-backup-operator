@@ -21,3 +21,5 @@
 go.work
 scratch
 .DS_STORE
+
+bin/setup-envtest
